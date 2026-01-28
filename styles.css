@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #eef2f6;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.phone {
+  width: 390px;
+  height: 844px;
+  background: #f4f6f9;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  border: 8px solid #ffffff;
+}
+
+.header {
+  background: #0b4a7a;
+  color: white;
+  padding: 28px 22px 70px 22px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.app-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.sub-title {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  padding: 0 18px;
+  margin-top: -45px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 14px;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+  text-align: left;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #7b8794;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.stat-big {
+  margin-top: 8px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #0b4a7a;
+}
+
+.stat-small {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #7b8794;
+}
+
+.content {
+  height: calc(100% - 95px);
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.section {
+  padding-top: 5px;
+  padding-left:18px;
+  padding-right:18px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0 12px 0;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.section-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6a3d;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+}
+
+.weeks {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #7b8794;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cell {
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #2b2f36;
+}
+
+.legend {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 6px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.light { background: #cfecee; }
+.moderate { background: #f5c84b; }
+.heavy { background: #ff7a45; }
+.critical { background: #e44848; color: white; }
+
+.course-card {
+  background: white;
+  border-radius: 22px;
+  padding: 18px;
+  margin-top: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07);
+  border-left: 6px solid #ddd;
+}
+
+.course-card.orange { border-left-color: #ff6a3d; }
+.course-card.blue { border-left-color: #0b4a7a; }
+
+.course-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-code {
+  font-weight: bold;
+  color: #ff6a3d;
+  letter-spacing: 1px;
+}
+
+.course-card.blue .course-code {
+  color: #0b4a7a;
+}
+
+.course-name {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.course-meta {
+  margin-top: 10px;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.pill {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.pill-medium {
+  background: #fff4d6;
+  color: #8a6a00;
+}
+
+.pill-hard {
+  background: #ffe1d6;
+  color: #b03a1e;
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 95px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.nav-item {
+  text-align: center;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.nav-dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ff6a3d;
+  margin: 0 auto 8px auto;
+}
+
+.nav-dot.gray {
+  background: #666;
+}
+
+.nav-item.active {
+  color: #ff6a3d;
+}
